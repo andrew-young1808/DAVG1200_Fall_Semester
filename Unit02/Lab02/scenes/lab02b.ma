@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: lab02a.ma
-//Last modified: Sat, Sep 07, 2024 07:19:08 PM
+//Name: lab02b.ma
+//Last modified: Sat, Sep 07, 2024 07:19:55 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "EBD1EF2B-4115-7A75-4E3D-358CF64F801F";
+fileInfo "UUID" "941951CA-46A6-94BE-5012-0B88F304114D";
 createNode transform -s -n "persp";
 	rename -uid "53F86491-4755-FF4A-87B4-578FEB4993FA";
 	setAttr ".v" no;
@@ -360,7 +360,7 @@ createNode mesh -n "lamp_shadeShape" -p "lamp_shade";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 33 ".pt";
+	setAttr -s 31 ".pt";
 	setAttr ".pt[4]" -type "float3" -6.9891726e-08 0.7276535 0.58481491 ;
 	setAttr ".pt[5]" -type "float3" 0.18117492 0.7276535 0.55619162 ;
 	setAttr ".pt[6]" -type "float3" 0.34461516 0.7276535 0.47312498 ;
@@ -393,20 +393,20 @@ createNode mesh -n "lamp_shadeShape" -p "lamp_shade";
 	setAttr ".pt[43]" -type "float3" -2.9802322e-08 1.1175871e-08 7.4505806e-09 ;
 	setAttr ".pt[44]" -type "float3" -2.9802322e-08 1.1175871e-08 7.4505806e-09 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "E97F5087-4A0A-21F6-9E9A-65A93E2C6D64";
+	rename -uid "44A75AEA-4628-6F82-0143-DBBC110759B1";
 	setAttr -s 8 ".lnk";
 	setAttr -s 8 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "03143729-462F-103A-035F-6B837C45D126";
+	rename -uid "FEFAB2F9-43C1-161A-1813-73A5BEA1D257";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "8EFAB14C-4203-F7C2-8CE1-878EEC997C8B";
+	rename -uid "EACB9CFD-41D6-DEDB-71F6-DFA5C89A4DF5";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "46FDA866-405B-B7C5-11D9-A9BE2FB871E7";
+	rename -uid "17F249AB-4D1D-4715-47D2-DF9A1B7B75CA";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "389DDCA2-463A-291C-BA46-34AEE96B10E1";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "FE2AEB78-4BF3-BA75-A1E2-5E9D2A998CD9";
+	rename -uid "B7C69DC6-4A74-0EB1-8B55-B483C1A63AA3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "631F1D6D-407B-1D20-AD4A-4D9A5D41C1C5";
 	setAttr ".g" yes;
@@ -748,8 +748,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "deleteComponent3.og" "LivingRoomShape.i";
 connectAttr "polyCube1.out" "floorShape.i";
 connectAttr "polyExtrudeFace2.out" "couchShape.i";
@@ -870,4 +868,4 @@ connectAttr "lambert4.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert5.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert6.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of lab02a.ma
+// End of lab02b.ma
