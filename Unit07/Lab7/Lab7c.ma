@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Lab7b.ma
-//Last modified: Mon, Oct 21, 2024 02:29:51 AM
+//Name: Lab7c.ma
+//Last modified: Mon, Oct 21, 2024 02:30:56 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "9646565A-46C9-428A-84B2-48AF3EF120F8";
+fileInfo "UUID" "7F66A5D6-4174-9233-F7D9-DFA0A9C3D964";
 createNode transform -s -n "persp";
 	rename -uid "50C2A2E1-4B8D-2F61-2948-BAB44C96500D";
 	setAttr ".v" no;
@@ -15232,4 +15232,4 @@ connectAttr "groupId29.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId31.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId33.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId34.msg" ":initialShadingGroup.gn" -na;
-// End of Lab7b.ma
+// End of Lab7c.ma
