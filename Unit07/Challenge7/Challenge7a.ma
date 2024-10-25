@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Lab7f.ma
-//Last modified: Thu, Oct 24, 2024 04:48:29 PM
+//Name: Challenge7a.ma
+//Last modified: Thu, Oct 24, 2024 04:50:19 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "AA0B740C-4582-E209-F15D-C49F3FED1570";
+fileInfo "UUID" "772277D9-446F-3B3E-A07D-BEBCAE4E97A9";
 createNode transform -s -n "persp";
 	rename -uid "50C2A2E1-4B8D-2F61-2948-BAB44C96500D";
 	setAttr ".v" no;
@@ -49864,4 +49864,4 @@ connectAttr "groupId73.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId74.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId75.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId76.msg" ":initialShadingGroup.gn" -na;
-// End of Lab7f.ma
+// End of Challenge7a.ma
