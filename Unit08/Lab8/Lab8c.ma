@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Lab8c.ma
-//Last modified: Fri, Oct 25, 2024 12:04:36 AM
+//Last modified: Fri, Oct 25, 2024 12:07:02 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -14,7 +14,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "1328495D-4D59-945F-0276-C0A0E6E6E0FE";
+fileInfo "UUID" "7823B09A-481A-CBA8-AA88-93A38BFE1CCC";
 createNode transform -s -n "persp";
 	rename -uid "50C2A2E1-4B8D-2F61-2948-BAB44C96500D";
 	setAttr ".v" no;
@@ -53145,7 +53145,12 @@ createNode mesh -n "mushroomhatShape3" -p "mushroomhat03";
 createNode transform -n "camera1";
 	rename -uid "81F034F3-42EF-5C61-B70A-70A6E262D483";
 	setAttr ".t" -type "double3" 15.866713994808478 7.4407399864119403 14.148351758476069 ;
-	setAttr ".r" -type "double3" -13.199999999999985 42.399999999999956 -2.153518639846121e-15 ;
+	setAttr ".r" -type "double3" -13.199999999999987 42.399999999999963 0 ;
+	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999989 1 ;
+	setAttr ".rp" -type "double3" -4.4408920985006252e-16 -4.4408920985006252e-16 0 ;
+	setAttr ".rpt" -type "double3" 1.8452892382849818e-16 1.1733324146429957e-17 3.7433580997326033e-16 ;
+	setAttr ".sp" -type "double3" -4.4408920985006262e-16 -4.4408920985006262e-16 0 ;
+	setAttr ".spt" -type "double3" 9.8607613152626465e-32 9.8607613152626465e-32 0 ;
 createNode camera -n "cameraShape1" -p "camera1";
 	rename -uid "47537EEF-4047-88FF-8C29-778534DD0E7A";
 	setAttr -k off ".v";
@@ -54970,6 +54975,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "polyCube1.out" "|bench|seat1|SeatC|SeatCShape.i";
 connectAttr "groupId32.id" "legShape1.iog.og[1].gid";
 connectAttr "polyBevel11.out" "legShape1.i";
